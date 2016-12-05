@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Crystals Collector</title>
+
+  <!-- You can use Bootstrap to make game look nicer (or style it yourself) -->
+  <!-- <link rel="stylesheet" href=""> -->
+
+<!-- Google Font -->
+ <style>
+  @import url('https://fonts.googleapis.com/css?family=Bungee');
+</style>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+ <!-- Bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+<div class = "container">
+<div class="jumbotron">
+  <h1 class="display-3">Crystals Collector</h1>
+  <p class="lead">You will be given a random number at the start of the game. There are four Game of Thrones characters below. By clicking on a character you will add a specific amount of points to your total score.</p>
+  <hr class="my-2">
+  <p>You win the game by matching your total score to the random number displayed below. You lose the game if your total score goes above the random number. </p>
+
+  <p>The value of each character is hidden from you until you click on it.</p>
+  <p>Each time when the game starts, the game will change the value of each character.</p>
+  <p class="lead">
+  <button type="button" class="btn btn-primary" id="startGame">Start Game!</button>
+  </p>
+</div>
+
+<div class = "row">
+<div class="col-sm-3">
+<h2>Random Number:<span id="randomNumber"></span></h2>
+
+</div>
+
+<div class="col-sm-3">
+<h2>Current Score:<span id="currentScore"></span></h2>
+</div>
+
+<div class="col-sm-3">
+<h2>Wins:<span id="wins"></span></h2>
+</div>
+
+<div class="col-sm-3">
+<h2>Losses:<span id="losses"></span></h2>
+</div>
+
+</div>
+
+<div class ="row">
+<div class="col-sm-3">
+<button class = "clickImage" id="dany" value="danyPic"><img src="assets/images/dany.jpg" class="img-fluid" alt="Responsive image"></button>
+<!-- <input type="image" name="dany" src="assets/images/dany.jpg" class="dany" id="characters"> -->
+</div>
+
+<div class="col-sm-3">
+<button class = "clickImage" id="jaime" value="jaimePic"><img src="assets/images/jaime.jpg" class="img-fluid" alt="Responsive image"></button>
+<!-- <input type="image" name="jaime" src="assets/images/jaime.jpg" class="jaime" id="characters"> -->
+</div>
+
+<div class="col-sm-3">
+<button class = "clickImage" id="jonSnow" value="jonSnowPic"><img src="assets/images/jonsnow.jpg" class="img-fluid" alt="Responsive image"></button>
+<!-- <input type="image" name="jon" src="assets/images/jonsnow.jpg" class="jon" id="characters"> -->
+</div>
+
+<div class="col-sm-3">
+<button class = "clickImage" id="tyrion" value="tyrionPic"><img src="assets/images/tyrion.jpg" class="img-fluid" alt="Responsive image"></button>
+<!-- <input type="image" name="tyrion" src="assets/images/tyrion.jpg" class="tyrion" id="characters"> -->
+</div>
+</div>
+
+</div>
+
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
