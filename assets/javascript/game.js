@@ -50,34 +50,40 @@ button.on("click", function(){
       if(imageClicked === "danyPic"){
       displayScore.push(dany);
       addingArray();
+      determineWinOrLoss();
       console.log(displayScore);
       }
 
       if(imageClicked === "jaimePic"){
       displayScore.push(jaime);
       addingArray();
+      determineWinOrLoss();
       console.log(displayScore);
       }
 
       if(imageClicked === "jonSnowPic"){
       displayScore.push(jonSnow);
       addingArray();
+      determineWinOrLoss();
       console.log(displayScore);
       }
 
       if(imageClicked === "tyrionPic"){
       displayScore.push(tyrion);
       addingArray();
+      determineWinOrLoss();
       console.log(displayScore);
       }
 
   // addingArray();
   console.log(imageClicked);
-  determineWinOrLoss();
 
 }
 
+// determineWinOrLoss();
+
 });
+
 
 
 
@@ -102,15 +108,27 @@ function addingArray(){
 function determineWinOrLoss(){
   if (playerScore === randomNumber){
     alert("You win!");
+    wins++;
+    $("#wins").text(wins);
+    resetGame();
   }
   else if(playerScore > randomNumber){
     alert("You lose!");
-
+    losses++;
+    $("#losses").text(losses);
+    resetGame();
   }
 
 }
 
 function resetGame(){
+  randomNumber = Math.floor((Math.random()*120) + 19);
+  playerScore = 0;
+  displayScore= [];
+  generateCharacterValues();
+  $("#currentScore").text(0);
+  $("#randomNumber").text(randomNumber);
+  console.log(displayScore);
 
 }
 
