@@ -24,13 +24,15 @@ var tyrion = $(".tyrion");
 var jonSnow = $(".jonSnow");
 // var jonSnow = Math.floor((Math.random()*12) + 1);
 
-
+var audioElement = document.createElement("audio");
+    audioElement.setAttribute("src", "assets/music/Game of Thrones Theme.mp3");
 
 //Functions//
 
 button.on("click", function(){
 
   if($(this).hasClass("btn-primary")){
+    audioElement.play();
     $("#currentScore").text(0);
     $("#randomNumber").text(randomNumber);
     $("#wins").text(0);
